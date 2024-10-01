@@ -49,7 +49,7 @@ body, html {
 }
 
 .logo {
-    width: 50px; /* Ajustado para que no deforme */
+    width: 20px; /* Ajustado para que no deforme */
     height: auto; /* Mantener la proporción */
 }
 
