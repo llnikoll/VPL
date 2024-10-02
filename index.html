@@ -33,15 +33,21 @@
     <nav class="nav-bar">
         <div class="nav-content">
             <img src="images/logo_lib.png" alt="Logo" class="logo">
-            <div class="nav-links">
+            
+            <!-- Ícono de menú hamburguesa para dispositivos móviles -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-links" id="nav-links">
                 <div class="dropdown">
                     <span>El Partido ▼</span>
                     <div class="dropdown-content">
                         <a href="#">Opción 1</a>
                         <a href="#">Opción 2</a>
-
                     </div>
                 </div>
+                
                 <div class="dropdown">
                     <span>Servicios ▼</span>
                     <div class="dropdown-content">
@@ -50,6 +56,7 @@
                         <a href="#">Servicio 3</a>
                     </div>
                 </div>
+
                 <div class="dropdown">
                     <span>Tu PC Departamental ▼</span>
                     <div class="dropdown-content">
@@ -58,25 +65,16 @@
                         <a href="#">Departamento 3</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <span>Cuentas ▼</span>
-                    <div class="dropdown-content">
-                        <a href="#">Mi Cuenta</a>
-                        <a href="#">Configuración</a>
-                        <a href="#">Salir</a>
-                    </div>
-                </div>
             </div>
-            <button class="afiliar-btn">Afiliar</button>
         </div>
     </nav>
 
     <!-- Nueva Sección para la Imagen -->
     <section class="image-section">
-        <h2><!-- TiTítulo de la Sección--></h2>
+        <h2><!-- Título de la Sección --></h2>
         <img src="images/nakayama_foto.png" alt="Eduardo Nakayama" class="section-image">
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
