@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #53c0ff;
     color: white;
     padding: 10px;
 }
@@ -22,10 +22,11 @@ body {
     color: white;
     margin-left: 15px;
     text-decoration: none;
+    font-size: 30px;
 }
 
 .nav-bar {
-    background-color: #444;
+    background-color: #3ab7e9;
     padding: 10px 20px;
 }
 
