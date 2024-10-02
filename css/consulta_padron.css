@@ -6,10 +6,12 @@ body {
     margin-top: 20px;
 }
 .card-header img {
-    width: 100px;
+    width: auto;
 }
+
+
 #resultado-card {
-    display: none;
+    display: auto;
     margin-top: 20px;
 }
 .resultado-texto {
