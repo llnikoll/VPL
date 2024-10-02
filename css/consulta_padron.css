@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.card {
+    margin-top: 20px;
+}
+.card-header img {
+    width: 100px;
+}
+#resultado-card {
+    display: none;
+    margin-top: 20px;
+}
+.resultado-texto {
+    font-weight: bold;
+}
+.resultado-valor {
+    color: green;
+}
+.resultado-error {
+    color: red;
+}
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #fff;
+}
+h5 {
+    margin: 10px;
+    padding: 5px;
+    background-color: #f3f3f3;
+    text-align: center;
+}

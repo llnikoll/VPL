@@ -2,6 +2,56 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Padron Partido de los Liberales</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn/4.3.1/css/boostrap.main.css"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PADRON - PARTIDO CRUZADA NACIONAL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/consulta_padron.css"> <!-- Enlace a CSS -->
+</head>
+<body>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <h4 class="text-center mt-4">CONSULTAR PADRON</h4>
+            <div class="card-body">
+                <label for="cin">CEDULA:</label>
+                <input type="text" class="form-control mb-3" id="cin" placeholder="Ingrese su CIN">
+                <div id="extranjero" style="display:none">
+                    <label for="fecha_nacimiento">FECHA NACIMIENTO:</label>
+                    <input type="date" class="form-control mb-3" id="fecha_nacimiento">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="checkbox-container">PADRON NACIONAL
+                            <input type="radio" class="padron-selector" value="n" name="padron" checked>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label class="checkbox-container">PADRON EXTRANJERO
+                            <input type="radio" class="padron-selector" value="e" name="padron">
+                        </label>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-warning" id="buscar-btn" data-tiempo-espera="5">
+                    BUSCAR <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="card mt-4" id="resultado-card">
+                <div class="card-body">
+                    <p id="resultado-texto"></p>
+                    <div id="fecha-afiliacion"></div>
+                    <div id="afiliate-btn"></div>
+                </div>
+            </div>
+            <h5>"Sujeto a modificaciones y actualizaciones según lo establecido en el código electoral <br>y del Estatuto de Cruzada Nacional, Art.14."</h5>
+        </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/consulta_padron.js"></script> <!-- Enlace a JavaScript -->
+</body>
+</html>
