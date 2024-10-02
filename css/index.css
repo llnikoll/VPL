@@ -99,12 +99,12 @@ body {
         width: 100%;
     }
 
-    .hamburger-menu {
-        display: block;
-    }
-
     .nav-links.active {
         display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
     }
 
     .top-bar {
