@@ -1,39 +1,13 @@
-// Obtener el elemento del menú hamburguesa
-var hamburgerMenu = document.getElementById('hamburger-menu');
+// /js/index.js
 
-// Obtener el contenedor de los enlaces de navegación
-var navLinks = document.getElementById('nav-links');
+// Función para cargar contenido HTML dinámico
+function loadHTML(elementId, filePath) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.error('Error al cargar', error));
+}
 
-// Agregar un event listener al menú hamburguesa
-hamburgerMenu.addEventListener('click', function() {
-    // Alternar la clase 'active' en el contenedor de enlaces de navegación
-    navLinks.classList.toggle('active');
-});
-
-// Funcionalidad para desplegar/ocultar los dropdowns
-var dropdowns = document.querySelectorAll('.dropdown');
-
-dropdowns.forEach(function(dropdown) {
-    dropdown.addEventListener('click', function(event) {
-        // Evitar que el clic en el texto cierre el menú
-        event.stopPropagation();
-
-        // Alternar la clase 'active' en el contenido del dropdown
-        var dropdownContent = this.querySelector('.dropdown-content');
-        dropdownContent.classList.toggle('active');
-        
-        // Cerrar otros dropdowns si están abiertos
-        dropdowns.forEach(function(otherDropdown) {
-            if (otherDropdown !== dropdown) {
-                otherDropdown.querySelector('.dropdown-content').classList.remove('active');
-            }
-        });
-    });
-});
-
-// Cerrar dropdowns al hacer clic fuera de ellos
-document.addEventListener('click', function() {
-    dropdowns.forEach(function(dropdown) {
-        dropdown.querySelector('.dropdown-content').classList.remove('active');
-    });
-});
+// Cargar secciones en el index.html
+loadHTML('header', 'sections/header.html');
+loadHTML('section1', 'sections/section1.html');

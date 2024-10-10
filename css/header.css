@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que el padding y borde se incluyan dentro del ancho/alto del elemento */
+}
+
+/* Top Bar (barra superior con información de contacto y redes sociales) */
+.top-bar {
+    display: flex; /* Organiza los elementos en fila */
+    justify-content: space-between; /* Espacia los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #53c0ff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    padding: 10px; /* Espaciado interno de 10px */
+}
+
+.contact-info div {
+    margin-right: 15px; /* Añade espacio a la derecha de los elementos de contacto */
+}
+
+.social-icons a {
+    color: white; /* Los iconos de redes sociales son blancos */
+    margin-left: 15px; /* Espacio a la izquierda de cada icono */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    font-size: 30px; /* Tamaño de los iconos (30px) */
+}
+
+/* Nav Bar (barra de navegación) */
+.nav-bar {
+    background-color: #3ab7e9; /* Color de fondo azul claro */
+    padding: 10px 20px; /* Espaciado interno superior/inferior de 10px y laterales de 20px */
+}
+
+.nav-content {
+    display: flex; /* Los elementos del contenido de la barra de navegación están en una fila */
+    justify-content: space-between; /* Se distribuyen equitativamente con el logo a un lado y los enlaces al otro */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+.logo {
+    height: 50px; /* El logo tiene una altura fija de 50px */
+}
+
+.nav-links {
+    display: flex; /* Los enlaces de navegación se muestran en fila */
+}
+
+/* Dropdown Menu (menú desplegable) */
+.dropdown {
+    position: relative; /* Posiciona el contenido desplegable en relación con este contenedor */
+    margin-right: 20px; /* Añade margen derecho */
+    cursor: pointer; /* Cambia el cursor a puntero cuando el usuario pasa el mouse */
+}
+
+.dropdown-content {
+    display: none; /* El contenido del menú está oculto por defecto */
+    position: absolute; /* Posiciona el contenido de manera absoluta respecto al padre */
+    background-color: #444; /* Fondo gris oscuro */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra del menú */
+    min-width: 150px; /* Ancho mínimo del menú desplegable */
+    z-index: 1; /* Se asegura de que el menú esté por encima de otros elementos */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Muestra el menú desplegable cuando se pasa el mouse */
+}
+
+.dropdown-content a {
+    padding: 12px 16px; /* Espaciado interno para los enlaces dentro del menú */
+    display: block; /* Los enlaces se muestran como bloques (uno debajo del otro) */
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.dropdown-content a:hover {
+    background-color: #555; /* Cambia el fondo a gris más oscuro cuando se pasa el mouse sobre los enlaces */
+}
+
+
+/* Estilos para menú hamburguesa */
+.hamburger-menu {
+    display: none; /* El menú hamburguesa está oculto por defecto */
+    cursor: pointer; /* Cambia el cursor a puntero cuando el usuario pasa el mouse */
+    font-size: 1.5rem; /* Tamaño del ícono del menú hamburguesa */
+}
+
+
+
+
+
+
+
+/* Adaptabilidad para pantallas móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Los enlaces de navegación se ocultan en pantallas pequeñas */
+        flex-direction: column; /* Los enlaces aparecerán en columna en vez de fila */
+        width: 100%; /* Los enlaces ocupan todo el ancho disponible */
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra los enlaces cuando se activa (al hacer clic en el menú hamburguesa) */
+    }
+
+    .hamburger-menu {
+        display: block; /* El menú hamburguesa se muestra en pantallas pequeñas */
+    }
+
+    .top-bar {
+        flex-direction: column; /* Organiza el contenido en una columna (en lugar de fila) en pantallas pequeñas */
+        text-align: center; /* Centra el texto en la barra superior */
+    }
+
+    .contact-info, .social-icons {
+        margin: 5px 0; /* Añade margen entre los elementos de contacto y los iconos sociales */
+    }
+
+    .nav-content {
+        flex-direction: column; /* El contenido de navegación se organiza en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .dropdown {
+        margin: 10px 0; /* Añade margen superior e inferior al menú desplegable */
+        text-align: center; /* Centra el texto en el menú desplegable */
+    }
+
+    .dropdown-content {
+        position: relative; /* Posiciona el menú desplegable en relación con el padre (ahora en columna) */
+        width: 100%; /* El contenido del menú ocupa todo el ancho del contenedor */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .logo {
+        height: 40px; /* Reduce el tamaño del logo a 40px */
+    }
+
+    .dropdown-content a {
+        padding: 10px; /* Reduce el padding en los enlaces del menú desplegable para hacerlos más compactos */
+    }
+}

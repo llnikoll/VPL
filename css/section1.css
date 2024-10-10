@@ -1,0 +1,10 @@
+/* Estilo de la imagen en la sección */
+.image-section {
+    text-align: center; /* Centra el contenido de la sección de la imagen */
+    padding: 20px; /* Añade espacio alrededor del contenido */
+}
+
+.section-image {
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+}
